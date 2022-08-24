@@ -1,0 +1,59 @@
+.menupp {
+  overflow: hidden;
+  cursor: pointer;
+  
+}
+
+.menupp a{
+  font-size: 16px;
+  margin-left: 20px;
+
+}
+
+.aaa a{
+  color:white;
+  margin-left: 40px;
+  font-size: 13px;
+}
+
+
+.abv{
+  cursor: pointer;
+}
+
+.abv:hover .carousel-caption{
+  position: absolute;
+  bottom: 100px;
+  transition: 0.1s ,bottom 0.1s 0.1s;
+}
+.srilanka{
+
+  position: absolute;
+ 
+  left: 150px;
+
+}
+
+.description{
+
+  position:absolute;
+bottom: 470px;
+  left: 780px;
+}
+
+.dropdown-toggle2 {
+  position: relative;
+}
+
+.dropdown-toggle2::after {
+  position: absolute;
+  right: 20px;
+  bottom: 45%;
+}
+
+.card11{
+  cursor: pointer;
+}
+.card11:hover{
+  box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 0.2);
+}
