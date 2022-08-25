@@ -52,7 +52,7 @@ const onclick5=()=>{
         <div className='container' style={{ height:"920px"}}>
             <br/>
 
-         <center>  <h1 style={{fontSize:"55px",color:"#a300cc"}}>Our Destinations</h1> 
+         <center>  <h1 style={{fontSize:"55px",color:"#a200ac", fontFamily:"Times New Roman, Times, serif"}}>Our Destinations</h1> 
 
 <div class="dropdown mt-3 mb-5" >
   <button style={{width:"540px",height:"60px",textAlign:"left" ,fontSize:"19px"}} class="form-control  dropdown-toggle dropdown-toggle2" type="button" data-bs-toggle="dropdown" aria-expanded="false">

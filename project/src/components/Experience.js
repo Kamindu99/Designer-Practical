@@ -1,19 +1,3 @@
-// import React from 'react';
-
-// export default function Experience (){
-
-//     return(
-
-//         <div>
-
-//         </div>
-
-//     )
-
-// }
-
-
-
 import React from "react";
 
 const Experience = () => {
@@ -21,7 +5,7 @@ const Experience = () => {
     <div>
       <div className=""  >
         <div class="container">
-          <h1 class="text-center text-lg-start  mb-4" style={{color:"#000099"}}>
+          <h1 class="text-center text-lg-start  mb-4" style={{color:"#000099",fontFamily:"Times New Roman, Times, serif"}}>
           Experience Somthing New
           </h1>
 

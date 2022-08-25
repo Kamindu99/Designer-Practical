@@ -1,17 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import img1 from "../images/img1.jpeg";
 import img2 from "../images/img2.jpg";
 import img3 from "../images/img3.jpg";
 
 export default function Navbar (){
 
+  const [roomnbook, setbook]=useState({
+    adult:1,
+    child:1
+  })
+
+  const onClickplus1 = ()=>{
+    setbook({
+      ...roomnbook,
+      adult:roomnbook.adult + 1  
+    })
+  }
+  const onClickplus2 = ()=>{
+    setbook({
+      ...roomnbook,
+      child:roomnbook.child + 1  
+    })
+  }
+
+  const onClickminus1 = ()=>{
+    setbook({
+      ...roomnbook,
+      adult:roomnbook.adult - 1  
+    })
+  }
+  const onClickminus2 = ()=>{
+    setbook({
+      ...roomnbook,
+      child:roomnbook.child - 1  
+    })
+  }
     return(
 
         <div className=''>
             <nav className="navbar bg-light">
-  <div className="container-fluid">
+  <div className="container-fluid mr-5">
     
-    <a className="navbar-brand menupp"><i class="fa fa-bed "></i> SHANGRI-LA</a>
+    <a className="navbar-brand menupp ml-5"><i class="fa fa-bed "></i> SHANGRI-LA</a>
     <div className="d-flex menupp" >
       <a className="navbar-brand"><i class="fa fa-user"></i> Sign In </a>
       <a className="navbar-brand">| Join Now </a>
@@ -29,9 +59,20 @@ export default function Navbar (){
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav aaa"  >
       <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"  id="dropdownMenuButton" aria-expanded="false">
            ABOUT
           </a>
+
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style={{width:"100%"}}>
+    zzzzzzzzzzzzzzzzzzzzsssssssssssssssssssssssssss
+
+
+    
+  </div>
+
+
+
+
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -61,7 +102,7 @@ export default function Navbar (){
           </a>
         </li>
         <li class="nav-item"  >
-          <button type="button" class="btn btn-outline-secondary" style={{marginLeft:"300px"}} >FIND A HOTEL</button>
+          <button type="button"  style={{color:"white",background:"black", marginLeft:"270px", border:" 1px solid white",padding:"3px",width:"140px"}} className="bg-dark" >FIND A HOTEL</button>
         </li>
       </ul>
     </div>
@@ -69,7 +110,9 @@ export default function Navbar (){
 </nav>
 
 
-<div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<div >
+<div className='frmd-con'>
+
 
 
   <div class="carousel-inner" style={{textShadow:" 1px 1px #000000"}}>
@@ -105,6 +148,112 @@ export default function Navbar (){
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+
+
+
+
+  <div class="formdwn" style={{backgroundColor:"hsl(0,0%,85%,0.7)",padding:"10px"}}>
+    
+    <form class="form-inline">
+    <div class="form-group mr-3">
+        <input type="date" style={{width:"180px",height:"50px",border:"0px",textAlign:"center" }} className="mr-"  />
+        <input type="date" style={{width:"180px",height:"50px",border:"0px",textAlign:"center" }}  />
+    
+        
+    
+        
+      </div>
+    
+    
+    
+      <div class="form-group  mr-3">
+    
+      <div class="dropdown">
+      <button style={{width:"300px",height:"50px",textAlign:"left" ,fontSize:"16px",border:"0px"}}  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fa fa-user mr-4"></i> 1 Room, {roomnbook.adult} Adult, {roomnbook.child} Children
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style={{width:"350px"}}>
+        <a class="dropdown-item mb-3" href="#">Max. 8 guests per room</a>
+    
+    
+    
+        
+    <table class="table" >
+      <thead class="thead-light">
+        <tr>
+          <th scope="col"></th>
+          <th scope="col" style={{width:"120px",fontSize:'12px'}}>Adult(s)</th>
+          <th scope="col" style={{width:"140px",fontSize:'12px'}}>Children (under 12)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Room1</td>
+          <td style={{}}> <i class="fa fa-minus mr-3" style={{color:"#a58a5c",fontSize:"14px"}} onClick={onClickminus1}></i> 1 <i class=" ml-3 fa fa-plus" style={{color:"#a58a5c",fontSize:"14px"}} onClick={onClickplus1}></i></td>
+          <td > <i class="fa fa-minus mr-3" style={{color:"#a58a5c",fontSize:"14px"}} onClick={onClickminus2}></i> 1 <i class=" ml-3 fa fa-plus" style={{color:"#a58a5c",fontSize:"14px"}} onClick={onClickplus2}></i></td>
+        </tr>
+        <br/>
+       
+      </tbody>
+    </table>
+    
+    <input style={{width:"94%",margin:"10px", background:"white", border: "1px solid #9e7e47", color:"#91723e",fontSize:"17px"}} type="submit" value="+ Add Room"/>
+        
+      </div>
+    </div>
+      
+    
+    
+      </div>
+    
+    
+    
+    
+    
+      <div class="form-group mr-3 ">
+    
+    
+     
+    
+    
+    <div class="dropdown">
+      <button style={{width:"300px",height:"50px",textAlign:"left" ,fontSize:"16px",border:"0px"}}  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fa fa-clipboard mr-4"></i>Special Code
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Corporate / Special Rate (Optional)</a>
+    
+    
+        <form class="px-3 py-3">
+        <div class="form-group mb-4">
+        <input type="text" class="form-control px-3 " value="Select Code Type"/>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control px-3" id="exampleDropdownFormPassword1" placeholder="Enter Code"/>
+        </div>
+        
+      </form>
+        
+      </div>
+    </div>
+    
+    
+    
+    
+    
+      </div>
+      <div class="form-group mx-sm-2 ">
+      <button style={{width:"80px",height:"50px",fontSize:"15px",border:"0px",background:"#9E6F1D",color:"white",fontWeight:"bold"}}  type="submit" class="">Search</button>
+    </div>
+    </form>
+    
+    
+    
+      </div>
+    
+
+
+
   
 </div>
 
@@ -115,7 +264,7 @@ export default function Navbar (){
 
 
 
-
+</div>
 
 
 
